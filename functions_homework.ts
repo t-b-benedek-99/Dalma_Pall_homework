@@ -52,22 +52,22 @@
 // } 
 
 
-// // FACTORIAL
-// {
-//     function calculateFactorial (input: number) {
+// FACTORIAL
+{
+    function calculateFactorial (input: number) {
 
-//         if (input === 0 || input === 1)
-//         return 1;
+        if (input === 0 || input === 1)
+        return 1;
         
-//         for (let i = input - 1; i >= 1; i--) {
-//             input = input * i; //input *= i;
-//         }
-//         return input;
+        for (let i = input - 1; i >= 1; i--) {
+            input = input * i; //input *= i;
+        }
+        return input;
 
     
-// }
-// console.log (calculateFactorial (6));
-// }
+}
+console.log (calculateFactorial (6));
+}
 
 
 // //PRINT PARAMS
@@ -90,7 +90,7 @@
 //         let outputArray:number [] = [];
 //         for (let i = 0; i < inputArray.length; i++){
 
-//             if (!outputArray.includes (inputArray[i])) {
+//             if (!outputArray.includes (inputArray[i])) { //IF IT DOESN'T INCLUDE
 //                 outputArray.push (inputArray[i]);
 //             }
 //         }return outputArray;
@@ -99,7 +99,7 @@
 //     console.log (unique([1, 2, 2, 3, 4, 4, 5]));
 // }
 
-// // // BUBBLE - unfinished
+// // BUBBLE - SORT THAT LIST
 
 {
     let numArray: number[] = [3, 65, 4, 37, 8];
@@ -109,7 +109,7 @@
         for (let i = 0; i < arrayExpected.length; i++) {
             for (let j = 0 ; j < arrayExpected.length -1; j++) {
 
-                if (arrayExpected[j] > arrayExpected [j + 1]) {
+                if (arrayExpected[j] > arrayExpected [j + 1]) { // ITT HONNAN TUDJA, HOGY AZ INDEX ÉRTÉKÉT AKARJUK HOZZÁADNI ÉS NEM EGYET, MINT ÉRTÉKET?
                     let swappedElement = arrayExpected[j];
                     arrayExpected[j] = arrayExpected[j+1];
                     arrayExpected[j + 1] = swappedElement;
@@ -151,21 +151,22 @@
     
 }
 
-// FIND PART OF AN INTEGER
+// // FIND PART OF AN INTEGER
 
-function findMatchingIndexes (pattern: number, inputArray: number[] ) :number[] {
+// function findMatchingIndices (pattern: number, inputArray: number[] ) :number[] {
 
-    let outputArray: number[] = [];// ebbe várjuk az indexeket
-    for ( let i = 0; i < inputArray.length; i++) {
-        let numberTurnedIntoString = inputArray[i].toString();
-        if (numberTurnedIntoString.includes(pattern.toString())) {
-            outputArray.push(i);
-        }
-    }
+//     let outputArray: number[] = [];// ebbe várjuk az indexeket a push-sal
 
- return outputArray;
-}
+//     for ( let i = 0; i < inputArray.length; i++) {
+//         let numberTurnedIntoString = inputArray[i].toString();
+//         if (numberTurnedIntoString.includes(pattern.toString())) {
+//             outputArray.push(i);
+//         }
+//     }
 
-let testArray = [ 12, 14, 41, 56, 61, 76];
+//  return outputArray;
+// }
 
-console.log (findMatchingIndexes (1, testArray));
+// let testArray = [ 12, 14, 41, 56, 61, 76];
+
+// console.log (findMatchingIndices (1, testArray));

@@ -21,6 +21,7 @@
 // {
 //     let numbers = [54, 23, 66, 12];
 //     console.log (numbers [2] + numbers[3]);
+
 // }
 
 // //SWAP ELEMENTS
@@ -32,6 +33,7 @@
 //     console.log (names);
 // }
 
+
 // //PRINT ELEMENTS    
 
 // { 
@@ -41,6 +43,7 @@
 //         console.log (e,i);
 //     })
 // }
+
 
 // //Hogyan kéne ugyanezt loop-pal?
 
@@ -177,6 +180,8 @@
 // */
 // {
 //     let numbers = [3, 4, 5, 6, 7];
+
+
 //     let tempArray = new Array (numbers.length);
 
 //     for (let i = 0; i < numbers.length; i++) {
