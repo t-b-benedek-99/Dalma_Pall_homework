@@ -6,15 +6,22 @@
 
 let fs = require('fs');
 
-let myFile = fs.readFile('/Users/dalmapall/Desktop/TS/homework/Errors_Exception handling_File IO/my-file.txt', 'utf8', function (error, data) {
 
-    if (error) {
+function read(path: string, encoder: string = 'utf8') {
 
-        console.log("Unable to read file: my-file.txt")
-    } else
-        console.log(data);
+    console.log(fs.readFileSync(path, encoder));
+}
 
-});
+try {
+    read('/Users/dalmapall/Desktop/TS/homework/Errors_Exception handling_File IO/my-file.txt')
+}
+catch (err) {
+    console.log("Unable to read file: my-file.txt")
+};
+
+
+
+
 
 
 

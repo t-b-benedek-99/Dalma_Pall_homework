@@ -5,28 +5,28 @@
 
 export { };
 
-function lineCount(text: string): number {
-    let nLines = 0;
-    for (let i = 0; i <= text.length; i++) {
-        if (text[i] === '\n') {
-            nLines++;
-        }
-    }
-    return (nLines);
-};
-
-
 let fs = require('fs');
 
-let myFile = fs.readFile('/Users/dalmapall/Desktop/TS/homework/Errors_Exception handling_File IO/my-file.txt', 'utf8', function (error, data) {
+function lineCount(path: string): number {
 
-    if (error) {
-        console.log("the file cannot be read.")
+    let myFile;
+    
+    try {
+
+        myFile = fs.readFileSync(path, 'utf8');
+
+    } catch (err) { return 0;}
+
+
+        let nLines = 0;
+        for (let i = 0; i <= myFile.length; i++) {
+        if (myFile[i] === '\n') {
+            nLines++;
+        }
+    
     }
 
-    else
-        console.log(lineCount(data));
+    return nLines
 }
-);
 
-
+console.log (lineCount ('/Users/dalmapall/Desktop/TS/homework/Errors_Exception handling_File IO/myfile.txt'));
